@@ -20,5 +20,5 @@ if (program.red) {
     console.log(chalk.red("Message was configured to show in red color."));
 }
 
-var str = "Hello World Basic Varient";
+var str = "Advance Variant";
 main(str);
