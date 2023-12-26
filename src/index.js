@@ -3,7 +3,7 @@ const path = require("path");
 const chalk=require("chalk");
 const rimraf = require("rimraf");
 const commander = require("commander");
-const main = require("./Main").Main;
+const AdvanceVariantPrint = require("./Main").AdvanceVariantPrint;
 
 const program = new commander.Command("Hello World NPM CLI");
 program.option("--displayMsg");
@@ -21,4 +21,4 @@ if (program.red) {
 }
 
 var str = "Advance Variant";
-main(str);
+AdvanceVariantPrint(str);
