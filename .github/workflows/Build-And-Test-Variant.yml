@@ -46,5 +46,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: app-advance-windows
-          path: ./naveed235812-AppAdvance-Windows*.tgz
+          path: ./naveed235812-app-advance-windows*.tgz
         if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
