@@ -1,7 +1,7 @@
 {
-  "name": "@naveed235812/VarientBasic",
+  "name": "@naveed235812/AppAdvance",
   "version": "1.1.0",
-  "description": "Basic varient of product",
+  "description": "Advance variant of test product.",
   "main": "index.js",
   "bin": {
     "hello-world": "./lib/index.js"
@@ -10,7 +10,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/naveedkhan8067/Varient_Basic"
+    "url": "https://github.com/naveedkhan8067/Advance_Variant"
   },
   "scripts": {
     "clean": "rimraf lib",
@@ -23,7 +23,7 @@
     "chalk": "^2.4.1",
     "commander": "^2.19.0",
     "readdirp": "^3.0.0",
-    "@naveed235812/hello-world-windows": "1.0.0"
+    "@naveed235812/hello-world-windows": "1.0.6"
   },
   "devDependencies": {
     "@types/node": "18.11.5",
