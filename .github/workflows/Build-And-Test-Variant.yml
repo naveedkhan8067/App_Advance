@@ -1,0 +1,50 @@
+name: "Build-And-Test-Variant"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:    
+      - main
+
+jobs:  
+  app-advance-variant-windows:
+    name: "Advance Variant (Windows)"
+    runs-on: windows-latest
+    steps:
+      - name: 📚 Checkout
+        uses: actions/checkout@v2.1.1
+
+      - name: 🟢 Install Node
+        uses: actions/setup-node@v4
+        with:
+          always-auth: true
+          node-version: 18
+          scope: '@naveed235812'
+          registry-url: https://registry.npmjs.org
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Advance Variant
+        run: npm run build
+
+      - name: Execute Tests
+        run: npm run test
+
+      # # This step was added to show the output
+      # - name: Execute Variant (Demo Purposes)
+      #   run: node ./lib/index.js
+
+      - name: Package Advance Variant      
+        run: npm pack
+        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
+
+      - name: Publish Advance Variant
+        uses: actions/upload-artifact@v3
+        with:
+          name: app-advance-windows
+          path: ./AppAdvance-Windows*.tgz
+        if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}

@@ -1,9 +1,17 @@
-import * as fs from "fs";
-import * as path from "path";
-import * as chalk from "chalk";
-import { Main } from "@naveed235812/hello-world-windows/lib/Main";
+import { CreateMsgString } from "@naveed235812/hello-world-windows/lib/Main";
 
-export function AdvanceVariantPrint(subStr: string) {
-  console.log("Display Msg: " + subStr);
-  Main("Hello-World Component");
+/*
+  Creates final message string
+*/
+export function PrepareMsgString(appMsgString: string): string {
+  const domainComponentMsg = CreateMsgString();
+  return appMsgString + " --> " + domainComponentMsg;
+}
+
+/*
+  Display message string
+*/
+export function AdvanceVariantPrint(message: string): void {
+  const msgString = PrepareMsgString(message);
+  console.log(msgString);
 }
