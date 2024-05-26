@@ -1,6 +1,17 @@
 import { CreateMsgString } from "@naveed235812/hello-world-windows/lib/Main";
 
-export function AdvanceVariantPrint(appMsgString: string): void {
+/*
+  Creates final message string
+*/
+export function PrepareMsgString(appMsgString: string): string {
   const domainComponentMsg = CreateMsgString();
-  console.log(appMsgString + " --> " + domainComponentMsg);
+  return appMsgString + " --> " + domainComponentMsg;
+}
+
+/*
+  Display message string
+*/
+export function AdvanceVariantPrint(message: string): void {
+  const msgString = PrepareMsgString(message);
+  console.log(msgString);
 }
