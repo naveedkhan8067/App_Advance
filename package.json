@@ -1,7 +1,7 @@
 {
   "name": "@naveed235812/app-advance-windows",
-  "version": "1.0.3",
-  "description": "Advance variant of test product.",
+  "version": "1.0.4",
+  "description": "Advance Application.",
   "main": "index.js",
   "bin": {
     "app-advance": "./lib/index.js"
