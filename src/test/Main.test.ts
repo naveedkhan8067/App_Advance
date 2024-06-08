@@ -1,10 +1,10 @@
 import { expect } from "chai";
-import { PrepareMsgString, AdvanceVariantPrint } from "../Main";
+import { PrepareMsgString, AdvanceAppPrint } from "../Main";
 
-describe("Advance Variant Tests", async () => {
+describe("Advance App Tests", async () => {
   it("verify message string", async () => {
-    const msgString = PrepareMsgString("Advance Variant");
-    expect(msgString).to.equal("Advance Variant --> *** Windows platform --> Hello-World ***");
-    AdvanceVariantPrint("Advance Variant");
+    const msgString = PrepareMsgString("Advance App");
+    expect(msgString).to.equal("Advance App --> *** Windows platform --> Hello-World ***");
+    AdvanceAppPrint("Advance App");
   });
 });

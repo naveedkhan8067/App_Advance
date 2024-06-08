@@ -11,7 +11,7 @@ export function PrepareMsgString(appMsgString: string): string {
 /*
   Display message string
 */
-export function AdvanceVariantPrint(message: string): void {
+export function AdvanceAppPrint(message: string): void {
   const msgString = PrepareMsgString(message);
   console.log(msgString);
 }
