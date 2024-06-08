@@ -2,7 +2,7 @@ name: "release-app-advance"
 
 on:
   workflow_run:
-    workflows: [Build-And-Test-App]
+    workflows: [Build-And-Test-Advance-App]
     types: 
       - completed
     branches:
