@@ -1,4 +1,4 @@
-name: "Build-And-Test-App"
+name: "Build-And-Test-Advance-App"
 
 on:
   workflow_dispatch:
@@ -10,8 +10,8 @@ on:
       - main
 
 jobs:  
-  app-advance-variant-windows:
-    name: "Advance Variant (Windows)"
+  app-advance-windows:
+    name: "Advance App (Windows)"
     runs-on: windows-latest
     steps:
       - name: 📚 Checkout
@@ -28,7 +28,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build Advance Variant
+      - name: Build Advance App
         run: npm run build
 
       - name: Execute Tests
@@ -38,11 +38,11 @@ jobs:
       # - name: Execute Variant (Demo Purposes)
       #   run: node ./lib/index.js
 
-      - name: Package Advance Variant      
+      - name: Package Advance App      
         run: npm pack
         if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
 
-      - name: Publish Advance Variant
+      - name: Publish Advance App
         uses: actions/upload-artifact@v3
         with:
           name: app-advance-windows
