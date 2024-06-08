@@ -1,4 +1,4 @@
-name: "Build-And-Test-Variant"
+name: "Build-And-Test-App"
 
 on:
   workflow_dispatch:
