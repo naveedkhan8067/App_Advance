@@ -1,10 +1,10 @@
-const displayMessage = require("./Main").AdvanceVariantPrint;
+const displayMessage = require("./Main").AdvanceAppPrint;
 
 /*
   Main function
 */
 function main() {
-  var appAdvanceMsg = "Advance Variant";
+  var appAdvanceMsg = "Advance App";
   displayMessage(appAdvanceMsg);
 }
 
