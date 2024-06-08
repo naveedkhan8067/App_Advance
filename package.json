@@ -1,6 +1,6 @@
 {
   "name": "@naveed235812/app-advance-windows",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Advance variant of test product.",
   "main": "index.js",
   "bin": {
@@ -10,7 +10,7 @@
   "license": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/naveedkhan8067/Advance_Variant"
+    "url": "https://github.com/naveedkhan8067/App_Advance"
   },
   "scripts": {
     "clean": "rimraf lib",
