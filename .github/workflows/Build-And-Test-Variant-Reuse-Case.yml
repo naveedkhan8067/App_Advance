@@ -33,4 +33,4 @@ jobs:
         with:
           COMPONENT: app-advance
           VARIANT_TYPE: windows
-          WORKING-DIR: ./
+          WORKING-DIR: ""
