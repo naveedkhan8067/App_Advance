@@ -9,7 +9,7 @@ on:
       - main
   
 jobs:
-  release-app:
+  release-advance-app:
     runs-on: windows-latest
     permissions:
       actions: write
@@ -29,7 +29,7 @@ jobs:
               console.log(item);
               const requiredPack = obj.data.artifacts.filter((pack) => { return pack.name == item } )[0];
               const getArtifacts = await github.rest.actions.downloadArtifact({ archive_format: 'zip', repo: context.repo.repo, artifact_id: requiredPack.id, owner: context.repo.owner });
-              const  = downloadPath + item + '.zip';
+              const filePath = downloadPath + item + '.zip';
               fs.writeFileSync(filePath, Buffer.from(getArtifacts.data));
             };
 
