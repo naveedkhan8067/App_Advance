@@ -45,7 +45,7 @@ jobs:
           scope: '@naveed235812'
           registry-url: https://registry.npmjs.org
 
-      - name: Publish Advance App
+      - name: Release Advance App
         run: |
           import os
           from glob import glob
