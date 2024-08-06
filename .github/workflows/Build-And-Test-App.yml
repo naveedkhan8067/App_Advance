@@ -14,10 +14,10 @@ jobs:
     name: "Advance App (Windows)"
     runs-on: windows-latest
     steps:
-      - name: 📚 Checkout
+      - name: 📚 Get Repository
         uses: actions/checkout@v2.1.1
 
-      - name: 🟢 Install Node
+      - name: 🟢 Install Node.js 18
         uses: actions/setup-node@v4
         with:
           always-auth: true
@@ -25,18 +25,18 @@ jobs:
           scope: '@naveed235812'
           registry-url: https://registry.npmjs.org
 
-      - name: Install Dependencies
+      - name: Install Advance App Dependencies
         run: npm install
 
       - name: Build Advance App
         run: npm run build
 
-      - name: Execute Tests
+      - name: Execute Advance App Tests
         run: npm run test
 
       # # This step was added to show the output
       # - name: Execute Variant (Demo Purposes)
-      #   run: node ./lib/index.js
+      #   run: node ./output/RunAdvanceApp.js
 
       - name: Package Advance App      
         run: npm pack

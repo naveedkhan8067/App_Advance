@@ -1,10 +1,10 @@
 {
   "name": "@naveed235812/app-advance-windows",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Advance Application.",
-  "main": "index.js",
+  "main": "RunAdvanceApp.js",
   "bin": {
-    "app-advance": "./lib/index.js"
+    "app-advance": "./output/RunAdvanceApp.js"
   },
   "author": "Naveed Ahmad",
   "license": "",
@@ -13,25 +13,25 @@
     "url": "https://github.com/naveedkhan8067/App_Advance"
   },
   "scripts": {
-    "clean": "rimraf lib",
-    "copy:indexFile": "cpx ./src/index.js ./lib",
-    "build": "tsc 1>&2 && npm run copy:indexFile",
-    "test": "mocha -r ts-node/register src/test/**.test.ts --timeout 5000"
+    "build": "tsc 1>&2 && npm run copy:RunAdvanceApp",
+    "copy:RunAdvanceApp": "cpx ./src/RunAdvanceApp.js ./output",
+    "test": "mocha -r ts-node/register src/test/**.test.ts",
+    "clean": "rimraf output"
   },
   "dependencies": {
     "commander": "^2.19.0",
-    "readdirp": "^3.0.0",
-    "@naveed235812/hello-world-windows": "1.0.6"
+    "@naveed235812/hello-world-windows": "1.0.6",
+    "readdirp": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "18.11.5",
+    "ts-node": "^10.8.2",
     "@types/chai": "^4.1.7",
-    "@types/mocha": "^8.2.2",
-    "cpx2": "^3.0.0",
-    "rimraf": "^3.0.2",
-    "typescript": "~4.3.0",
     "chai": "^4.2.0",
+    "@types/mocha": "^8.2.2",
     "mocha": "^10.0.0",
-    "ts-node": "^10.8.2"
+    "typescript": "~4.3.0",
+    "cpx2": "^3.0.0",
+    "rimraf": "^3.0.2"
   }
 }
