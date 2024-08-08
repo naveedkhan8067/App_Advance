@@ -1,4 +1,4 @@
-import { CreateMsgString } from "@naveed235812/hello-world-windows/lib/Main";
+import { CreateMsgString } from "@naveed235812/hello-world-windows/output/Main";
 
 /*
   Creates final message string
