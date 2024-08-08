@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "commander": "^2.19.0",
-    "@naveed235812/hello-world-windows": "1.0.6",
+    "@naveed235812/hello-world-windows": "1.0.8",
     "readdirp": "^3.0.0"
   },
   "devDependencies": {
